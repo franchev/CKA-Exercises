@@ -19,12 +19,12 @@ My tactic while taking the exam was to at least visit each question once. Then I
 <h2>Contents</h2>
 
 * [Application Lifecycle Management 8%](https://github.com/franchev/CKA-Exercises/blob/master/application_lifecycle_management.md)
-* [Installation, Configuration & Validation 12%]
-* [Core Concepts 19%]
-* [Networking 11%]
-* [Scheduling 5%]
-* [Security 12%]
-* [Cluster Maintenance 11%]
-* [Logging / Monitoring 5%]
-* [Storage 7%]
-* [Troubleshooting 10%]
+* [Installation, Configuration & Validation 12%](https://github.com/franchev/CKA-Exercises/blob/master/installation_configuration_validation.md)
+* [Core Concepts 19%](https://github.com/franchev/CKA-Exercises/blob/master/core_concepts.md)
+* [Networking 11%](https://github.com/franchev/CKA-Exercises/blob/master/networking.md)
+* [Scheduling 5%](https://github.com/franchev/CKA-Exercises/blob/master/scheduling.md)
+* [Security 12%](https://github.com/franchev/CKA-Exercises/blob/master/security.md)
+* [Cluster Maintenance 11%](https://github.com/franchev/CKA-Exercises/blob/master/cluster_maintenance.md)
+* [Logging / Monitoring 5%](https://github.com/franchev/CKA-Exercises/blob/master/logging_monitoring.md)
+* [Storage 7%](https://github.com/franchev/CKA-Exercises/blob/master/storage.md)
+* [Troubleshooting 10%](https://github.com/franchev/CKA-Exercises/blob/master/troubleshooting.md)

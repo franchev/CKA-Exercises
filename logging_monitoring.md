@@ -1,9 +1,9 @@
 <h1>Logging/Monitoring 5%</h1>
 
 <h2>Understand how to monitor all cluster components</h2>
-Kubernetes does not come pre-installed with metrics monitoring. 
+<p>Kubernetes does not come pre-installed with metrics monitoring. </p>
 
-<h4>Minikube enable metrics-server<h4>
+<h3>Minikube enable metrics-server<h3>
   
 <details><summary>Answer</summary>
 <p>
@@ -16,7 +16,7 @@ minikube addons enable metrics-server
 </details>
   
 
-<h4>non-minikube environment, enable metrics-server</h4>
+<h3>non-minikube environment, enable metrics-server</h3>
 
 <details><summary>Answer</summary>
 <p>
@@ -30,7 +30,7 @@ kubectl create -f deploy/1.8+/
 </details>
 
 
-<h4>View cluster metric information after metrics-server is installed</h4>
+<h3>View cluster metric information after metrics-server is installed</h3>
 
 <details><summary>Answer</summary>
 <p>
@@ -47,10 +47,49 @@ kubectl top pod   # View pod CPU and memory usage
 <h2>Understand how to monitor applications</h2>
 
 <h2>Manage cluster component logs</h2>
+<h3>View all nodes in your cluster</h3>
+<details><summary>Answer</summary>
+<p>
 
-<h2>Manage application logs</h2>
+```bash
+kubectl get nodes -o wide
+```
 
-<h4>Create a pod using the image:busybox that runs this command 'i=0;while true;do echo "hello number $i"; i=$((i+1));sleep 1; done'. View its log<h4>
+</p>
+</details>
+
+<h3> Looking at logs on the master</h3>
+<details><summary>Answer</summary>
+<p>
+
+```bash
+ssh master1  #ssh to the master node
+less /var/log/kube-apiserver.log  # API Server, responsible for serving the API
+less /var/log/kube-scheduler.log  # Scheduler, responsible for making scheduling decisions
+less /var/log/kube-controller-manager.log # Controller that manages replication controller
+```
+
+</p>
+</details>
+
+
+<h3> Looking at logs on worker nodes</h3>
+<details><summary>Answer</summary>
+<p>
+
+```bash
+ssh node1   # ssh to a worker node
+less /var/log/kubelet.log # kubelet, responsible for running containers on the node
+less /var/log/kube-proxy.log # kube proxy, responsible for service load balancing
+```
+
+</p>
+</details>
+
+
+
+<h2> Manage application logs</h2>
+<h3>Create a pod using the image:busybox that runs this command 'i=0;while true;do echo "hello number $i"; i=$((i+1));sleep 1; done'. View its log<h3>
   
 <details><summary>Answer</summary>
 <p>

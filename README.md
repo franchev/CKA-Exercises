@@ -18,7 +18,7 @@ My tactic while taking the exam was to at least visit each question once. Then I
 
 <h2>Contents</h2>
 
-* [Application Lifecycle Management 8%]
+* [Application Lifecycle Management 8%](https://github.com/franchev/CKA-Exercises/blob/master/application_lifecycle_management.md)
 * [Installation, Configuration & Validation 12%]
 * [Core Concepts 19%]
 * [Networking 11%]

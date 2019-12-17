@@ -2,7 +2,7 @@
 
 <h2>Introduction </h2>
 
-I was so pleased to find this repo: https://github.com/dgkanatsios/CKAD-exercises when I was preparing to become CKAD. However, I could not find the same structure and design for the CKA Certification. I understand that the CKA Certification is more demanding, as a result, I thought why not follow the same concept and create my own Repo to help others study. 
+I was so pleased to find this repo: https://github.com/dgkanatsios/CKAD-exercises when I was preparing to become CKAD Certified. However, I could not find the same structure and design for the CKA Certification. I understand that the CKA Certification is more demanding, as a result, I thought why not follow the same concept and create my own Repo to help others study. 
 
 Below, you'll find a set of exercises that will help you prepare for the Certified Kubernetes Administrator Exam. You can use these exercises to help you get more ready for the real exam. 
 

@@ -3,7 +3,7 @@
 <h2>Understand how to monitor all cluster components</h2>
 <p>Kubernetes does not come pre-installed with metrics monitoring. </p>
 
-<h3>Minikube enable metrics-server<h3>
+<h3>Minikube enable metrics-server</h3>
   
 <details><summary>Answer</summary>
 <p>
@@ -89,7 +89,7 @@ less /var/log/kube-proxy.log # kube proxy, responsible for service load balancin
 
 
 <h2> Manage application logs</h2>
-<h3>Create a pod using the image:busybox that runs this command 'i=0;while true;do echo "hello number $i"; i=$((i+1));sleep 1; done'. View its log<h3>
+<h3>Create a pod using the image:busybox that runs this command 'i=0;while true;do echo "hello number $i"; i=$((i+1));sleep 1; done'. View its log</h3>
   
 <details><summary>Answer</summary>
 <p>

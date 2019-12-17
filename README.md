@@ -15,6 +15,14 @@ My tactic while taking the exam was to at least visit each question once. Then I
 1. Length: 3 hours
 1. Amount of questions: 30 (6minutes/question)
 1. Cost: $300
+1. passing score: 74%
+1. You'll get your grade within 36 hours
+
+<h2>Learning tools</h2>
+
+1. ckad exercises: https://github.com/dgkanatsios/CKAD-exercises
+1. udemy: https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests
+1. Install Kubernetes cluster: https://github.com/kelseyhightower/kubernetes-the-hard-way
 
 <h2>Contents</h2>
 

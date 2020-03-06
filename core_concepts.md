@@ -43,24 +43,75 @@ tar xzvf etcd-v3***.tar.gz
 ```
 </details>
 
-<h3> </h3>
 
-<details><summary>Answer</summary>
-
-```bash
-```
-</details>
-
-
-</details>
-
-<h3> </h3>
-
-<details><summary>Answer</summary>
-
-```bash
-```
-</details>
 
 <h2>Understand Services and other network primitives</h2>
 
+<h3> Create a namespace named dev-namespace, then create a pod named nginx with image nginx in the dev-namespace</h3>
+
+<details><summary>Answer</summary>
+
+```bash
+kubectl create namespace dev-namespace
+kubectl run nginx --image=nginx --restart=Never -n dev-namespace
+```
+</details>
+
+<h3> Create a pod named nginx with image nginx in the dev-namespace using a pod definition file</h3>
+
+<details><summary>Answer</summary>
+
+```bash
+kubectl run gninx --image=nginx --restart=Never --dry-run -o yaml > nginx-pod.yaml
+
+vim nginx-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: IfNotPresent
+    name: nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
+
+kubectl create -f nginx-pod.yaml -n dev-namespace
+
+OR
+kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml | kubectl create -n dev-namespace -f -
+```
+</details>
+
+
+<h3> </h3>
+
+<details><summary>Answer</summary>
+
+```bash
+```
+</details>
+
+
+<h3> </h3>
+
+<details><summary>Answer</summary>
+
+```bash
+```
+</details>
+
+
+<h3> </h3>
+
+<details><summary>Answer</summary>
+
+```bash
+```
+</details>

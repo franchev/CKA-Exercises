@@ -5,18 +5,18 @@
 <h2>Understand the Kubernetes cluster architecture.</h2>
 <p> The cluster is made of the Master & worker nodes</p>
 <p> The master node is responsible for managing, planning, scheduling, & monitor nodes. Here are the components that lives on the master node(s) </p>
-* ETCD Cluster
-* Kube-apiserver
-* Kube Controller Manager
-* Kube-scheduler
+<li> ETCD Cluster </li>
+<li> Kube-apiserver </li>
+<li> Kube Controller Manager </li>
+<li> Kube-scheduler </li>
 
 <p> The worker node is responsible for hosting application as containers. Here are the components that ives on the worker node(s)<p>
-* kubelet agent
-* kube-proxy
-* Container Runtime Engine (also on master node)
+  <li> kubelet agent </li>
+  <li> kube-proxy </li>
+  <li> Container Runtime Engine (also on master node) </li>
 
 <p> There are many different component in a Kubernetes Cluster & they all have their own purpose </p>
-<ul> Cluster Components
+<p> Cluster Components </p>
 <li> ETCD Cluster: Highly available key value store. A database that stores information in a key value base format. </li>
 <li>Kube-scheduler: Identifies the right node to place a container on based on the containers resource requirements, worker nodes capacity, or based on any other policies or constrainst such as taints or node affinity rules</li>
 <li>Node-Controller: Takes care of nodes, they are responsible for unboarding new nodes to the cluster.</li>

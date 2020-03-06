@@ -1,4 +1,4 @@
-<h1>Cluster 11%</h1>
+<h1>Cluster Maintenance 11%</h1>
 
 <h2>Understand Kubernetes cluster upgrade process</h2>
 

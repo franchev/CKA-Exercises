@@ -19,6 +19,7 @@
 <ul> Cluster Components
 <li> ETCD Cluster: Highly available key value store. A database that stores information in a key value base format. </li>
 <li>Kube-scheduler: Identifies the right node to place a container on based on the containers resource requirements, worker nodes capacity, or based on any other policies or constrainst such as taints or node affinity rules</li>
+<li>Kube-Controller-Manager: When you install kubernetes controller manager the different controllers get installed. There are many controllers that Kubernetes uses to control the different part of the cluster.  </li>
 <li>Node-Controller: Takes care of nodes, they are responsible for unboarding new nodes to the cluster.</li>
 <li>Replication-Controller: Ensures that the desired number of containers are running at all times</li>
 <li>Kube-apiserver: The primary management component of Kubernetes. It is responsible for orchastrating all operations within the cluster. It exposes the Kubernetes API which is used by external users to perform management operations on the cluster as well ast he various controllers to monitor the state of the cluster.   </li>
@@ -26,5 +27,38 @@
 <li>Kubelet: An agent that runs on each node in the Cluster. It listens for instructions from the kube-api server and deploys or destroys containers on the nodes. </li>
 <li>Kube-proxy: This runs on the worker nodes. It ensures that the necessary rules are in place on the worker nodes to allow the containers running on them to reach each other. </li>
 </ul>
+
+<h3> Install ETCD On linux</h3>
+
+<details><summary>Answer</summary>
+
+```bash
+# Download binary
+curl -L https://github.com/etc
+# Extract binary
+tar xzvf etcd-v3***.tar.gz
+# Run it
+./etcd
+```
+</details>
+
+<h3> </h3>
+
+<details><summary>Answer</summary>
+
+```bash
+```
+</details>
+
+
+</details>
+
+<h3> </h3>
+
+<details><summary>Answer</summary>
+
+```bash
+```
+</details>
 
 <h2>Understand Services and other network primitives</h2>

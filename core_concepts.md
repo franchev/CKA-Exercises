@@ -28,7 +28,7 @@
 <li>Kube-proxy: This runs on the worker nodes. It ensures that the necessary rules are in place on the worker nodes to allow the containers running on them to reach each other. </li>
 </ul>
 
-<<<<<<< HEAD
+
 <h3> Install ETCD On linux</h3>
 
 <details><summary>Answer</summary>
@@ -63,6 +63,4 @@ tar xzvf etcd-v3***.tar.gz
 </details>
 
 <h2>Understand Services and other network primitives</h2>
-=======
-<h2>Understand Services and other network primitives</h2>
->>>>>>> 337ee96272e784e5d112d66b366bf64165be318b
+

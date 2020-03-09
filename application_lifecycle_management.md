@@ -192,9 +192,11 @@ kubectl exec -it nginx -- /bin/sh -c "ls /tmp/app"  # verify that the configmap 
 
 </details>
 
-<h3> </h3>
+<h3> Create a secret named mysql-secret configure it with these key/value data (DB_Host: mysql, DB_User: root, DB_Password: passwd). Create a pod named mysql using image mysql. Set the envFrom to point to the mysql-secret secret object </h3>
 
-<details>Create a secret named mysql-secret configure it with these key/value data (DB_Host: mysql, DB_User: root, DB_Password: passwd). Create a pod named mysql using image mysql. Set the envFrom to point to the mysql-secret secret object <summary>Answer</summary>
+<details> 
+
+<summary>Answer</summary>
 
 ```bash
 kubectl create secret generic mysql-secret \
@@ -227,12 +229,22 @@ kubectl apply -f mysql-pod.yaml
 
 <h2>Know how to scale applications</h2>
 
-<h3> Create a deployment named nginx with image=nginx. Set replicaSet to 3. After creation, modify the deployment and scale up replica value to 5. View history of changes to the deployment.</h3>
+<h3> Create a deployment named nginx2 with image=nginx. Set replicaSet to 3. After creation, modify the deployment and scale up replica value to 5. View history of changes to the deployment.</h3>
 
 <details><summary>Answer</summary>
 
 ```bash
+kubectl create deployment nginx2 --image=nginx --dry-run -o yaml > deploy2.yml
+vi deploy2.yml
+# change replica to 3
+kubectl apply -f deploy2.yaml
 
+# change replica to 5
+kubectl edit deploy nginx2
+
+# view deployment status and history
+kubectl rollout status deploy nginx2
+kubectl rollout history deploy nginx2
 ```
 
 </details>
@@ -242,7 +254,7 @@ kubectl apply -f mysql-pod.yaml
 <details><summary>Answer</summary>
 
 ```bash
-
+rollout undo deployment/nginx --revision=1 
 ```
 
 </details>
@@ -252,6 +264,8 @@ kubectl apply -f mysql-pod.yaml
 <details><summary>Answer</summary>
 
 ```bash
+kubectl edit deploy nginx2
+# under labels add app: web-server
 
 ```
 

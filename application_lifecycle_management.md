@@ -277,7 +277,47 @@ kubectl edit deploy nginx2
 <details><summary>Answer</summary>
 
 ```bash
-
+# review this link: https://kubernetes.io/docs/concepts/cluster-administration/logging/
+vi fluentd.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: counter
+spec:
+  containers:
+  - name: count
+    image: busybox
+    args:
+    - /bin/sh
+    - -c
+    - >
+      i=0;
+      while true;
+      do
+        echo "$i: $(date)" >> /var/log/1.log;
+        echo "$(date) INFO $i" >> /var/log/2.log;
+        i=$((i+1));
+        sleep 1;
+      done
+    volumeMounts:
+    - name: varlog
+      mountPath: /var/log
+  - name: count-agent
+    image: k8s.gcr.io/fluentd-gcp:1.30
+    env:
+    - name: FLUENTD_ARGS
+      value: -c /etc/fluentd-config/fluentd.conf
+    volumeMounts:
+    - name: varlog
+      mountPath: /var/log
+    - name: config-volume
+      mountPath: /etc/fluentd-config
+  volumes:
+  - name: varlog
+    emptyDir: {}
+  - name: config-volume
+    configMap:
+      name: fluentd-config
 ```
 
 </details>

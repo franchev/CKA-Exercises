@@ -44,9 +44,6 @@ tar xzvf etcd-v3***.tar.gz
 </details>
 
 
-
-<h2>Understand Services and other network primitives</h2>
-
 <h3> Create a namespace named dev-namespace, then create a pod named nginx with image nginx in the dev-namespace</h3>
 
 <details><summary>Answer</summary>
@@ -90,28 +87,140 @@ kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml | kubectl crea
 </details>
 
 
-<h3> </h3>
+<h3> Create Replication Controller using a yaml file</h3>
 
 <details><summary>Answer</summary>
 
 ```bash
+vi rc.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: frontend
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: frontend
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
+  replicas: 2
+
+kubectl apply -f rc.yaml
+
 ```
 </details>
 
 
-<h3> </h3>
+<h3> Create a replicaSet using yaml</h3>
 
 <details><summary>Answer</summary>
 
 ```bash
+vi rset.yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-rset
+  labels:
+    app: myapp
+    type: frontend
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: frontend
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
+  replicas: 2
+  selector: 
+    matchLabels:
+      type: frontend
+
+kubectl apply -f rset.yaml
+
+kubectl get replicaset    -> to view replicasets
 ```
 </details>
 
 
-<h3> </h3>
+<h3> Scale replicaset myapp-rset to 6</h3>
 
 <details><summary>Answer</summary>
 
 ```bash
+kubectl scale --replicas=6 replicaset myapp-rset
 ```
 </details>
+
+<h3> Create a deployment with image nginx. Name the deployment nginx. Set it to have 2 replicas. Expose port 80 without using a service </h3>
+
+<details><summary>Answer</summary>
+
+```bash
+kubectl run nginx --image=nginx --replicas=2 --port=80
+
+alternative (new approach)
+kubectl create deployment nginx --image=nginx --dry-run -o yaml > deploy.yaml
+
+# then edit deploy.yaml
+# increase replicas to 2
+# in the containers section add the ports value as below
+vi deploy.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+          - containerPort: 80
+        resources: {}
+status: {}
+```
+</details>
+
+
+
+
+
+</details>
+
+<h3>Get pods on all namespaces</h3> 
+
+<details><summary>Answer</summary>
+
+```bash
+kubectl get pod --all-namespaces
+```
+</details>
+
+<h2>Understand Services and other network primitives</h2>
+

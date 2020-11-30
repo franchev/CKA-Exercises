@@ -27,7 +27,7 @@ My tactic while taking the exam was to at least visit each question once. Then I
 <h2>Contents</h2>
 
 * [Cluster Architecture, Installation & Configuration 25%](https://github.com/franchev/CKA-Exercises/blob/master/architecture-installation-configuration.md) 
-* [Workloads & Scheduling % 15](https://github.com/franchev/CKA-Exercises/blob/master/workloads-scheduling.md) 
+* [Workloads & Scheduling 15%](https://github.com/franchev/CKA-Exercises/blob/master/workloads-scheduling.md) 
 * [Services & Networking 20%](https://github.com/franchev/CKA-Exercises/blob/master/services-networking.md)
 * [Storage 10%](https://github.com/franchev/CKA-Exercises/blob/master/storage.md)
 * [Troubleshooting 30%](https://github.com/franchev/CKA-Exercises/blob/master/troubleshooting.md)

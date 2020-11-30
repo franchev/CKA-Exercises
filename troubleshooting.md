@@ -1,9 +1,13 @@
-<h1>Troubleshooting 10%</h1>
+# Troubleshooting 10%
 
-<h2>Troubleshoot application failure</h2>
+## Evaluate Cluster and node logging
 
-<h2>Troubleshoot control plane failure</h2>
+## Understand how to monitor applications
 
-<h2>Troubleshoot worker node failure</h2>
+## Manage container stdout and stderr logs
 
-<h2>Troubleshoot networking</h2>
+## troubleshoot application failure
+
+## troubleshoot cluster component failure
+
+## troubleshoot networking

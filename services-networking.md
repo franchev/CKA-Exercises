@@ -1,14 +1,14 @@
-* Services & Networking 20%
+# Services & Networking 20%
 
-** Understand Host networking Configuration on the cluster nodes
+## Understand Host networking Configuration on the cluster nodes
 
-** Understand connectivity between pods
+## Understand connectivity between pods
 
-** Understand clusterIP, NodePort, LoadBalancer Service types and endpoints
+## Understand clusterIP, NodePort, LoadBalancer Service types and endpoints
 
-** Know how to use Ingress Controllers & Ingress Resources
+## Know how to use Ingress Controllers & Ingress Resources
 
-** Known how to configure and use CoreDNS
+## Known how to configure and use CoreDNS
 
-** Choose an appropriate container network interface plugin
+## Choose an appropriate container network interface plugin
 

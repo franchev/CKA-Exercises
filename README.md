@@ -12,10 +12,10 @@ My tactic while taking the exam was to at least visit each question once. Then I
 
 <h2>Exam Detail</h2>
   
-1. Length: 3 hours
-1. Amount of questions: 30 (6minutes/question)
+1. Length: 2 hours
+1. Amount of questions: 15-20 performance-based tasks
 1. Cost: $300
-1. passing score: 74%
+1. passing score: 66%
 1. You'll get your grade within 36 hours
 
 <h2>Learning tools</h2>
@@ -26,13 +26,8 @@ My tactic while taking the exam was to at least visit each question once. Then I
 
 <h2>Contents</h2>
 
-* [Application Lifecycle Management 8%](https://github.com/franchev/CKA-Exercises/blob/master/application_lifecycle_management.md)
-* [Installation, Configuration & Validation 12%](https://github.com/franchev/CKA-Exercises/blob/master/installation_configuration_validation.md)
-* [Core Concepts 19%](https://github.com/franchev/CKA-Exercises/blob/master/core_concepts.md)
-* [Networking 11%](https://github.com/franchev/CKA-Exercises/blob/master/networking.md)
-* [Scheduling 5%](https://github.com/franchev/CKA-Exercises/blob/master/scheduling.md)
-* [Security 12%](https://github.com/franchev/CKA-Exercises/blob/master/security.md)
-* [Cluster Maintenance 11%](https://github.com/franchev/CKA-Exercises/blob/master/cluster_maintenance.md)
-* [Logging / Monitoring 5%](https://github.com/franchev/CKA-Exercises/blob/master/logging_monitoring.md)
-* [Storage 7%](https://github.com/franchev/CKA-Exercises/blob/master/storage.md)
-* [Troubleshooting 10%](https://github.com/franchev/CKA-Exercises/blob/master/troubleshooting.md)
+* [Cluster Architecture, Installation & Configuration 25%](https://github.com/franchev/CKA-Exercises/blob/master/architecture-installation-configuration.md) 
+* [Workloads & Scheduling % 15](https://github.com/franchev/CKA-Exercises/blob/master/workloads-scheduling.md) 
+* [Services & Networking 20%](https://github.com/franchev/CKA-Exercises/blob/master/services-networking.md)
+* [Storage 10%](https://github.com/franchev/CKA-Exercises/blob/master/storage.md)
+* [Troubleshooting 30%](https://github.com/franchev/CKA-Exercises/blob/master/troubleshooting.md)

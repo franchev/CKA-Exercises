@@ -1,0 +1,5 @@
+#impersonate service account to see if it can list pods
+kubectl auth can-i list pods --as=system:serviceaccount:default:mysvcaccount1
+
+# impersonate service account see if it can get pods
+kubectl get pods -v 6 --as=system:serviceaccount:default:mysvcaccount1

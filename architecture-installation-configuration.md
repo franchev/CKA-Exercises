@@ -162,7 +162,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo ifconfig enp0s8 | grep -I net | grep -v inet6 | awk '{print $2}'
 
 # let's run the initialize command (please replace the api-server-advertize-address with the ip you got from above)
-sudo Kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertize-address=192.168.56.2
+sudo kubeadm init --pod-network-cidr 10.244.0.0/16 
 ```
 
 - Now in the output, please copy the command starting with kubeadm join... in a text editor, we will use that on the worker nodes to get them to join later
@@ -182,7 +182,7 @@ kubectl get nodes # this is to verify that the master node is ready in the clust
 - Let's now join the 2 other nodes to the cluster (please run this on kubenode01 & kubenode02 )
 ```bash
 # please replace this command with the command that you copied earlier in your text editor. 
-kubeadm join <control-plane-host>:<control-plane-port> --token <token> --discovery-token-ca-cert-hash sha256:<hash>
+sudo kubeadm join <control-plane-host>:<control-plane-port> --token <token> --discovery-token-ca-cert-hash sha256:<hash>
 
 kubectl get nodes  # You should now see all the nodes, they might not be ready, but if you run this command a bunch of times, they'll be ready (mine took about 5 minutes for them to be ready)
 ```

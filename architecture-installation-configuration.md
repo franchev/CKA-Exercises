@@ -38,6 +38,7 @@ Let's then use that VagrantFile
 - Clone the repository (if you don't have a github account, you can download the zip file instead.)
 ```bash
 git clone https://github.com/kodekloudhub/certified-kubernetes-administrator-course.git
+cd certified-kubernetes-administrator-course
 ```
 
 - Let's check the status of our vagrant boxes
